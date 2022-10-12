@@ -1,0 +1,18 @@
+{
+  "productionMode": false,
+  "useDeprecatedV14Bootstrapping": false,
+  "eagerServerLoad": false,
+  "npmFolder": "/Users/edward/IdeaProjects/Loeppe",
+  "node.version": "v16.17.1",
+  "node.download.root": "https://nodejs.org/dist/",
+  "generatedFolder": "/Users/edward/IdeaProjects/Loeppe/target/frontend",
+  "frontendFolder": "/Users/edward/IdeaProjects/Loeppe/frontend",
+  "connect.javaSourceFolder": "/Users/edward/IdeaProjects/Loeppe/src/main/java",
+  "javaResourceFolder": "/Users/edward/IdeaProjects/Loeppe/src/main/resources",
+  "connect.applicationProperties": "/Users/edward/IdeaProjects/Loeppe/src/main/resources/application.properties",
+  "connect.openApiFile": "/Users/edward/IdeaProjects/Loeppe/target/generated-resources/openapi.json",
+  "project.frontend.generated": "/Users/edward/IdeaProjects/Loeppe/frontend/generated",
+  "pnpm.enable": false,
+  "require.home.node": false,
+  "build.folder": "target"
+}
