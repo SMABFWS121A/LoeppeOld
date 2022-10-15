@@ -1,5 +1,8 @@
 package com.example.application.model.dto;
 
+import lombok.Data;
+
+@Data
 public class Artikel {
     private Integer id;
     private String name;
