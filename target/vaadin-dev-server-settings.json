@@ -1,13 +1,13 @@
 {
-  "frontendFolder": "/Users/edward/IdeaProjects/Loeppe/frontend",
+  "frontendFolder": "C:/Users/loewe/IdeaProjects/Loeppe/./frontend",
   "themeFolder": "themes",
-  "themeResourceFolder": "/Users/edward/IdeaProjects/Loeppe/target/flow-frontend",
-  "staticOutput": "/Users/edward/IdeaProjects/Loeppe/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "themeResourceFolder": "C:/Users/loewe/IdeaProjects/Loeppe/target/flow-frontend",
+  "staticOutput": "C:/Users/loewe/IdeaProjects/Loeppe/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
   "generatedFolder": "generated",
-  "frontendBundleOutput": "/Users/edward/IdeaProjects/Loeppe/target/classes/META-INF/VAADIN/webapp",
+  "frontendBundleOutput": "C:\\Users\\loewe\\IdeaProjects\\Loeppe\\target\\classes\\META-INF\\VAADIN\\webapp",
   "addonFrontendFolder": "target/flow-frontend/",
   "themeName": "mytodo",
-  "clientServiceWorkerSource": "/Users/edward/IdeaProjects/Loeppe/target/sw.ts",
+  "clientServiceWorkerSource": "C:\\Users\\loewe\\IdeaProjects\\Loeppe\\target\\sw.ts",
   "pwaEnabled": true,
   "offlineEnabled": true,
   "offlinePath": "'.'"
