@@ -1,5 +1,7 @@
 package com.example.application.views.main;
 
+import com.example.application.data.dto.Customer;
+import com.example.application.data.service.CustomerService;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.notification.Notification;
@@ -12,21 +14,25 @@ import com.vaadin.flow.router.Route;
 @Route(value = "")
 public class MainView extends HorizontalLayout {
 
+    private final CustomerService customerService;
+
     private final TextField name;
     private final Button sayHello;
 
-    public MainView() {
+    public MainView(CustomerService customerService) {
+        this.customerService = customerService;
+
         name = new TextField("Your name");
         sayHello = new Button("Say hello");
-        sayHello.addClickListener(e -> {
-            Notification.show("Hello " + name.getValue());
-        });
+        sayHello.addClickListener(e -> Notification.show("Hello " + name.getValue()));
         sayHello.addClickShortcut(Key.ENTER);
 
         setMargin(true);
         setVerticalComponentAlignment(Alignment.END, name, sayHello);
 
         add(name, sayHello);
-    }
 
+        customerService.save(new Customer());
+        System.out.println(customerService.getAll().get(0).getId());
+    }
 }
