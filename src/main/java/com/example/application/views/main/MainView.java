@@ -1,38 +1,45 @@
 package com.example.application.views.main;
 
-import com.example.application.data.dto.Customer;
-import com.example.application.data.service.CustomerService;
-import com.vaadin.flow.component.Key;
-import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.notification.Notification;
-import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.component.formlayout.FormLayout;
+import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.H2;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
-@PageTitle("Main")
-@Route(value = "")
-public class MainView extends HorizontalLayout {
+@PageTitle("Startseite")
+@Route(value = "", layout = LoeppeLayout.class)
+public class MainView extends VerticalLayout {
 
-    private final CustomerService customerService;
+    private final H1 welcome;
+    private final H2 user;
+    private final TextField userId;
+    private final TextField userName;
 
-    private final TextField name;
-    private final Button sayHello;
+    public MainView() {
+        welcome = new H1("Wilkommen in der Loeppe Auftagsverwaltung");
+        user = new H2("Angmeldet als:");
+        userId = new TextField();
+        userName = new TextField();
 
-    public MainView(CustomerService customerService) {
-        this.customerService = customerService;
+        configureTextFields();
 
-        name = new TextField("Your name");
-        sayHello = new Button("Say hello");
-        sayHello.addClickListener(e -> Notification.show("Hello " + name.getValue()));
-        sayHello.addClickShortcut(Key.ENTER);
-
-        setMargin(true);
-        setVerticalComponentAlignment(Alignment.END, name, sayHello);
-
-        add(name, sayHello);
-
-        customerService.save(new Customer());
-        System.out.println(customerService.getAll().get(0).getId());
+        add(welcome, user, createLoggedInAs());
     }
+
+    private void configureTextFields() {
+        userId.setValue("000000");
+        userId.setReadOnly(true);
+        userName.setValue("Max Mustermann");
+        userName.setReadOnly(true);
+    }
+
+    private FormLayout createLoggedInAs() {
+        FormLayout formLayout = new FormLayout();
+        formLayout.addFormItem(userId, "User-ID");
+        formLayout.addFormItem(userName, "User-Name");
+        return formLayout;
+    }
+
 }
