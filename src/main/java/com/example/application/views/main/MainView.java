@@ -1,18 +1,14 @@
 package com.example.application.views.main;
 
-import com.vaadin.flow.component.Key;
-import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H2;
-import com.vaadin.flow.component.notification.Notification;
-import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
-@PageTitle("Main")
+@PageTitle("Startseite")
 @Route(value = "", layout = LoeppeLayout.class)
 public class MainView extends VerticalLayout {
 

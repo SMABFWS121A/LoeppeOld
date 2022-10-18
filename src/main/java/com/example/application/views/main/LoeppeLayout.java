@@ -2,14 +2,12 @@ package com.example.application.views.main;
 
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
-import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.router.RouterLink;
-
-import javax.swing.text.html.ListView;
+import com.vaadin.flow.server.PWA;
 
 public class LoeppeLayout extends AppLayout {
 
@@ -19,12 +17,13 @@ public class LoeppeLayout extends AppLayout {
     }
 
     private void createHeader() {
-        H1 logo = new H1("Loeppe");
-        logo.addClassNames("text-1", "m-m");
+        Image img = new Image("images/Logo_gut.png", "placeholder plant");
+        img.setHeight("50px");
 
         HorizontalLayout header = new HorizontalLayout(
-                new DrawerToggle(),
-                logo
+                img,
+                new DrawerToggle()
+
         );
 
         header.setDefaultVerticalComponentAlignment(FlexComponent.Alignment.CENTER);

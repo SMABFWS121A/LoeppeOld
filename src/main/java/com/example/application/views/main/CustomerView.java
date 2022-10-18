@@ -6,7 +6,7 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
-@PageTitle("Customer")
+@PageTitle("Kunden")
 @Route(value = "customer", layout = LoeppeLayout.class)
 public class CustomerView extends VerticalLayout {
 
@@ -22,7 +22,6 @@ public class CustomerView extends VerticalLayout {
         custPhone = new TextField();
 
         add(createCustSearch());
-
     }
 
     public FormLayout createCustSearch() {
